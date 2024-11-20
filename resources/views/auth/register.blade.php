@@ -10,8 +10,8 @@
 <label>Nama Lengkap</label><br>
 <input type="text" id="name" name="name" value="{{ old('name') }}"><br>
 
-@if ($errors->has('name '))
-<span class="text-danger">{{$errors->first('name') }}</span>
+@if ($errors->has('name'))
+<span class="text-danger">{{ $errors->first('name') }}</span>
 @endif
 
 <br>
@@ -23,17 +23,17 @@
 @endif
 
 <br>
-<label>password</label><br>
+<label>Password</label><br>
 <input type="password" id="password" name="password"><br>
 
-@if ($errors->has("password"))
-<span class="text-danger">{{ Serrors->first("password") }}</span>
+@if ($errors->has('password'))
+<span class="text-danger">{{ $errors->first('password') }}</span>
 @endif
 <br>
-<label for=" password_confirmation" class="col-md-4 col-form-label text-md-end text-start ">Confirm Password </label>
-<div class="col-nd-6">
+<label for="password_confirmation" class="col-md-4 col-form-label text-md-end text-start">Confirm Password </label>
+<div class="col-md-6">
 <br>
-<input type="password" class="form-control" id="password confirmation" name="password confirmation">
+<input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
 
 </div> 
 <Input type="submit" value="Register">

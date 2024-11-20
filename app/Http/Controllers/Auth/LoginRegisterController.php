@@ -50,7 +50,7 @@ class LoginRegisterController extends Controller
             'email' => 'required|email',
             'password' => 'required'
         ]);
-        if (Auth::attemp($crendentials)){
+        if (Auth::attempt($crendentials)){
             $request->session()->regenerate();
             if ($request->user()->usertype == 'admin') {
                 return redirect('admin/dashboard')->withSuccess('You have successfully logged in!');
